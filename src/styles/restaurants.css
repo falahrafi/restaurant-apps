@@ -1,0 +1,312 @@
+#restaurants {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 36px;
+   padding: 12px 60px;
+}
+
+.card {
+   position: relative;
+   background-color: white;
+   border-radius: 20px;
+   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-image {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 20px 20px 0 0;
+}
+
+.restaurant-city {
+   position: absolute;
+   top: 5%;
+   width: fit-content;
+   padding: 4px 24px 4px 16px;
+   background-image: linear-gradient(to right, #101010, #10101090);
+   border: 2px solid #F9D423;
+   border-left: none;
+   border-radius: 0 20px 20px 0;
+   color: #F9D423;
+   /* color: white; */
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.restaurant-info {
+   padding: 24px;
+}
+
+.restaurant-info h2 {
+   margin-top: 8px;
+   margin-bottom: 8px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.restaurant-desc {
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 16px;
+   /* font-weight: 700; */
+}
+
+.restaurant-rating {
+   width: fit-content;
+   padding: 2px 8px;
+   background-image: linear-gradient(to right, #F9D423, #F9D42340);
+   border: 1px solid #F9D423;
+   border-radius: 4px;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.restaurant__btn-to-detail {
+   display: inline-block;
+   min-width: 44px;
+   min-height: 44px;
+   margin-top: 16px;
+   padding: 2px 24px;
+   background-image: linear-gradient(to right, #e65c00, #e9c306, #e9c306, #e65c00);
+   background-position: left;
+   background-size: 200%;
+   border-radius: 16px;
+   box-shadow: 0 6px 30px 0px rgba(239, 127, 0, 0.3);
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 44px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+}
+
+.restaurant__btn-to-detail:hover {
+   background-position: right;
+   color: white;
+}
+
+
+
+
+#restaurant {
+   padding: 12px 60px;
+}
+
+.detail-card {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 24px;
+   padding: 24px;
+   margin-bottom: 24px;
+   background-color: white;
+   border-radius: 20px;
+   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.detail-image {
+   width: 100%;
+   height: 430px;
+   object-fit: cover;
+   border-radius: 16px;
+}
+
+.detail-info {
+   margin-top: 20px;
+   margin-right: 24px;
+}
+
+.detail-info h4 {
+   width: fit-content;
+   padding: 4px 12px;
+   margin-bottom: 6px;
+   background-image: linear-gradient(to right, #e65c00, #F9D423);
+   border-radius: 6px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.detail-info p {
+   margin-bottom: 16px;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 24px;
+   text-align: justify;
+}
+
+.detail-info p.desc {
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 16px;
+}
+
+.detail-menus {
+   margin-left: 8px;
+   margin-right: 8px;
+}
+
+.detail-menus h3 {
+   margin-bottom: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+#detailFoods p,
+#detailDrinks p {
+   display: inline-block;
+   padding: 4px 16px;
+   margin-bottom: 12px;
+   margin-right: 8px;
+   border-radius: 60px;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+#detailFoods p {
+   background-image: linear-gradient(to right, #F9D423, #F9D42340);
+   border: 1px solid #F9D423;
+}
+
+#detailDrinks p {
+   background-image: linear-gradient(to right, #23bcf9, #2399f940);
+   border: 1px solid #2392f9;
+}
+
+
+
+
+.detail-card.detail-reviews {
+   grid-template-columns: 1fr;
+}
+
+.detail-reviews h3 {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.detail-reviews-block {
+   margin-bottom: 16px;
+   background-image: linear-gradient(to right, #1d1d1d15, #1d1d1d00);
+   border: 1px solid #F9D423;
+   border-radius: 12px;
+   padding: 12px 16px;
+}
+
+.detail-reviews-block.add-review {
+   margin-bottom: 8px;
+   background-image: linear-gradient(to right, #101010, #272727);
+   border: 2px dashed #F9D423;
+   border-radius: 12px;
+   color: white;
+   padding: 24px;
+}
+
+.detail-reviews-block.add-review h4 {
+   margin-bottom: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 24px;
+}
+
+#reviewName,
+#reviewContent {
+   display: block;
+   min-height: 44px;
+   width: 100%;
+   padding: 6px 10px;
+   margin-bottom: 12px;
+   border: none;
+   border-radius: 6px;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 18px;
+}
+
+#reviewName {
+   font-weight: 700;
+}
+
+#submitReview {
+   display: inline-block;
+   min-width: 44px;
+   min-height: 44px;
+   margin-top: 4px;
+   padding: 2px 24px;
+   background-image: linear-gradient(to right, #e65c00, #e9c306, #e9c306, #e65c00);
+   background-position: left;
+   background-size: 200%;
+   border: none;
+   border-radius: 60px;
+   box-shadow: 0 6px 30px 0px rgba(239, 127, 0, 0.3);
+   color: white;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 44px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+}
+
+#submitReview:hover {
+   background-position: right;
+   color: white;
+}
+
+#custReviews h4 {
+   width: fit-content;
+   padding: 2px 8px;
+   margin-bottom: 8px;
+   background-color: #1d1d1d;
+   border-radius: 6px;
+   color: #F9D423;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 20px;
+   font-weight: 700;
+}
+
+#custReviews h5 {
+   margin-bottom: 8px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 700;
+}
+
+#custReviews p {
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 18px;
+}
+
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 760px) {
+   #restaurants {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   #restaurant {
+      padding: 12px 24px;
+   }
+}
+
+@media screen and (max-width: 576px) {
+   #restaurants,
+   .detail-card {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media screen and (max-width: 390px) {
+   #restaurants {
+      padding: 12px 24px;
+   }
+}
