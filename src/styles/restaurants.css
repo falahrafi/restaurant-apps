@@ -1,3 +1,7 @@
+#mainContent {
+  min-height: 3500px;
+}
+
 #restaurants {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
@@ -71,7 +75,7 @@
 
 .restaurant__btn-to-detail {
    display: inline-block;
-   min-width: 44px;
+   min-width: 132px;
    min-height: 44px;
    margin-top: 16px;
    padding: 2px 24px;
@@ -289,6 +293,10 @@
 /* BREAKPOINTS */
 
 @media screen and (max-width: 760px) {
+   #mainContent {
+   min-height: 5000px;
+   }
+
    #restaurants {
       grid-template-columns: 1fr 1fr;
    }
@@ -299,6 +307,10 @@
 }
 
 @media screen and (max-width: 576px) {
+   #mainContent {
+      min-height: 9850px;
+   }
+
    #restaurants,
    .detail-card {
       grid-template-columns: 1fr;
