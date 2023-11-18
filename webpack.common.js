@@ -7,7 +7,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const CompressionPlugin = require('compression-webpack-plugin');
 const zlib = require('zlib');
@@ -107,7 +107,7 @@ module.exports = {
         }),
       ],
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new CompressionPlugin({
       filename: '[path][base].gz',
       algorithm: 'gzip',
