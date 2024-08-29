@@ -40,7 +40,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       <img class="restaurant-image lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="The Image of ${restaurant.name}">
       <span class="restaurant-city" tabindex="0" aria-label="Located in ${restaurant.city}">${restaurant.city}</span>
       <div class="restaurant-info">
-         <p class="restaurant-rating" tabindex="0" aria-label="The rating is ${restaurant.rating}">⭐️ Rating: ${restaurant.rating}</p>
+         <p class="restaurant-rating" tabindex="0" aria-label="The rating is ${restaurant.rating}">⭐️ Rating : ${restaurant.rating}</p>
          <h2 class="restaurant-title">${restaurant.name}</h2>
          <p class="restaurant-desc" tabindex="0" aria-label="The description is the following: ${restaurant.description}">${restaurant.description}</p>
          <a href="${`#/detail/${restaurant.id}`}" class="restaurant__btn-to-detail">Detail&ensp;<i class="fas fa-external-link-alt"></i></a>

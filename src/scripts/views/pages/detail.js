@@ -11,9 +11,14 @@ const Detail = {
     loadingDiv.style.visibility = 'visible';
 
     return `
-      <div id="likeButtonContainer"></div>
-      <div id="restaurant" class="restaurant"></div>
-      <div id="failedMessageContainer"></div>
+      <section id="content" class="restaurant-detail">
+        <div id="likeButtonContainer"></div>
+        <div id="restaurant" class="restaurant"></div>
+        <div id="failedMessageContainer"></div>
+      </section>
+      <footer>
+        <footer-copyright></footer-copyright>
+      </footer>
     `;
   },
 

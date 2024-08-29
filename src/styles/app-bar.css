@@ -1,8 +1,21 @@
 .navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
    min-height: 80px;
-   background-color: white;
+   /* margin: 16px; */
+   /* border-radius: 16px; */
+   /* background-color: white; */
+   background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 100%);
    /* border-radius: 0px 0px 20px 20px; */
-   border-bottom: 4px solid #e65c00;
+   /* border-bottom: 4px solid #e65c00; */
+   /* border-top: 1px solid rgba(255, 255, 255, 1); */
+   /* border-left: 1px solid rgba(255, 255, 255, 1); */
+   /* box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05); */
+   -webkit-backdrop-filter: blur(10px);
+           backdrop-filter: blur(10px);
+   z-index: 1000;
 }
 
 .navbar-logo {
@@ -64,7 +77,8 @@
 #drawerMobile {
    position: absolute;
    left: -100%;
-   width: 60%;
+   top: 10%;
+   width: 70%;
    background-image: linear-gradient(to right, #101010dd, #101010);
    border-radius: 0px 0px 24px 0px;
    box-shadow: 0 6px 60px 0px rgba(255, 255, 255, 0.3);
@@ -72,12 +86,14 @@
 }
 
 #drawerMobile ul {
-   padding: 4px 12px;
+   padding: 24px 12px;
    list-style-type: none;
 }
 
 #drawerMobile li {
    margin: 16px;
+   padding-top: 8px;
+   padding-bottom: 8px;
    text-align: center;
 }
 
@@ -87,16 +103,16 @@
    min-height: 44px;
    color: white;
    font-family: 'Montserrat', sans-serif;
-   font-size: 16px;
+   font-size: 28px;
    line-height: 44px;
    text-decoration: none;
    transition: all 0.3s ease-in-out;
 }
 
 #drawerMobile li:hover {
-   padding: 2px 18px;
+   padding: 16px 18px;
    background-image: linear-gradient(to right, #e65c00, #F9D423);
-   border-radius: 16px;
+   border-radius: 12px;
    color: white;
    font-weight: 700;
 }

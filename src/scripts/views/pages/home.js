@@ -10,9 +10,15 @@ const Home = {
     loadingDiv.style.visibility = 'visible';
 
     return `
-      <h1 class="main-title" tabindex="0">Restaurants</h1>
-      <div id="failedMessageContainer"></div>
-      <div id="restaurants" class="restaurants"></div>
+      <hero-element></hero-element>
+      <section  id="content" class="restaurant-list">
+        <h1 class="main-title" tabindex="0">Restaurants</h1>
+        <div id="failedMessageContainer"></div>
+        <div id="restaurants" class="restaurants"></div>
+      </section>
+      <footer>
+        <footer-copyright></footer-copyright>
+      </footer>
     `;
   },
 

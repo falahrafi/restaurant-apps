@@ -1,38 +1,75 @@
 #mainContent {
-  min-height: 3500px;
+  min-height: 100vh;
 }
 
 #restaurants {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 36px;
-   padding: 12px 60px;
+   /* padding: 12px 60px; */
 }
 
 .card {
    position: relative;
    background-color: white;
-   border-radius: 20px;
-   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 16px;
+   background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 100%);
+   border-bottom: 3px solid rgba(255, 255, 255, 1);
+   border-left: 1px solid rgba(255, 255, 255, 1);
+   box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.25);
+   -webkit-backdrop-filter: blur(10px);
+           backdrop-filter: blur(10px);
+}
+
+.restaurant-item__not__found {
+   width: fit-content;
+   margin: 0px auto;
+   padding: 48px;
+   background-color: white;
+   border-radius: 24px;
+   background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 100%);
+   border-top: 3px solid rgba(255, 255, 255, 1);
+   border-left: 1px solid rgba(255, 255, 255, 1);
+   box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.25);
+   -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+}
+
+.restaurant-item__not__found img {
+   width: 400px;
+   margin: 0 auto;
+}
+
+.restaurant-item__not__found p {
+   margin-top: 24px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 24px;
+   font-weight: 500;
+   font-style: italic;
+   text-align: center;
 }
 
 .restaurant-image {
    width: 100%;
    height: 200px;
    object-fit: cover;
-   border-radius: 20px 20px 0 0;
+   border-radius: 16px 16px 0 0;
 }
 
 .restaurant-city {
    position: absolute;
    top: 5%;
    width: fit-content;
-   padding: 4px 24px 4px 16px;
-   background-image: linear-gradient(to right, #101010, #10101090);
-   border: 2px solid #F9D423;
+   padding: 6px 24px 4px 16px;
+   background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%);
+   /* border: 2px solid #F9D423; */
+   border-top: 2px solid rgba(255, 255, 255, 1);
    border-left: none;
    border-radius: 0 20px 20px 0;
-   color: #F9D423;
+   box-shadow: 4px 2px 20px 0 rgba(0, 0, 0, 0.4);
+   -webkit-backdrop-filter: blur(10px);
+           backdrop-filter: blur(10px);
+   color: #101010;
    /* color: white; */
    font-family: 'Montserrat', sans-serif;
    font-size: 16px;
@@ -64,25 +101,29 @@
 
 .restaurant-rating {
    width: fit-content;
-   padding: 2px 8px;
-   background-image: linear-gradient(to right, #F9D423, #F9D42340);
-   border: 1px solid #F9D423;
-   border-radius: 4px;
+   margin-bottom: 16px;
+   padding: 6px 12px;
+   background-image: linear-gradient(to right, #101010, #444);
+   /* border: 1px solid #F9D423; */
+   border-radius: 8px;
+   color: white;
    font-family: 'Nunito Sans', sans-serif;
-   font-size: 16px;
+   font-size: 14px;
    font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 2px;
 }
 
 .restaurant__btn-to-detail {
    display: inline-block;
    min-width: 132px;
    min-height: 44px;
-   margin-top: 16px;
+   margin-top: 24px;
    padding: 2px 24px;
    background-image: linear-gradient(to right, #e65c00, #e9c306, #e9c306, #e65c00);
    background-position: left;
    background-size: 200%;
-   border-radius: 16px;
+   border-radius: 12px;
    box-shadow: 0 6px 30px 0px rgba(239, 127, 0, 0.3);
    color: white;
    font-family: 'Montserrat', sans-serif;
@@ -101,19 +142,24 @@
 
 
 
-#restaurant {
+/* #restaurant {
    padding: 12px 60px;
-}
+} */
 
 .detail-card {
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 24px;
-   padding: 24px;
-   margin-bottom: 24px;
-   background-color: white;
-   border-radius: 20px;
-   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+   grid-template-columns: 2fr 3fr;
+   gap: 32px;
+   margin-bottom: 36px;
+   padding: 32px;
+   border-radius: 16px;
+   background: linear-gradient(to left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
+   /* border: 2px solid #F9D423; */
+   border-top: 3px solid rgba(255, 255, 255, 1);
+   border-left: 1px solid rgba(255, 255, 255, 1);
+   box-shadow: 0 1px 36px 0 rgba(0, 0, 0, 0.2);
+   -webkit-backdrop-filter: blur(10px);
+           backdrop-filter: blur(10px);
 }
 
 .detail-image {
@@ -124,31 +170,36 @@
 }
 
 .detail-info {
-   margin-top: 20px;
+   margin-top: 12px;
    margin-right: 24px;
 }
 
 .detail-info h4 {
    width: fit-content;
-   padding: 4px 12px;
-   margin-bottom: 6px;
+   padding: 8px 16px;
+   margin-bottom: 10px;
    background-image: linear-gradient(to right, #e65c00, #F9D423);
-   border-radius: 6px;
+   border-radius: 60px;
    font-family: 'Montserrat', sans-serif;
    font-size: 16px;
    font-weight: 700;
 }
 
 .detail-info p {
-   margin-bottom: 16px;
-   font-family: 'Nunito Sans', sans-serif;
+   margin-bottom: 20px;
+   font-family: 'Maven Pro', sans-serif;
    font-size: 24px;
+   font-weight: 500;
    text-align: justify;
 }
 
 .detail-info p.desc {
    font-family: 'Nunito Sans', sans-serif;
    font-size: 16px;
+}
+
+.detail-card:nth-child(3) {
+   grid-template-columns: 1fr 1fr;
 }
 
 .detail-menus {
@@ -165,23 +216,24 @@
 
 #detailFoods p,
 #detailDrinks p {
-   display: inline-block;
-   padding: 4px 16px;
+   display: block;
+   padding: 8px 16px;
    margin-bottom: 12px;
    margin-right: 8px;
-   border-radius: 60px;
+   border-radius: 8px;
    font-family: 'Nunito Sans', sans-serif;
-   font-size: 20px;
+   font-size: 16px;
    font-weight: 600;
+   text-transform: capitalize;
 }
 
 #detailFoods p {
-   background-image: linear-gradient(to right, #F9D423, #F9D42340);
+   background-image: linear-gradient(to right, #F9D423, #F9D42330);
    border: 1px solid #F9D423;
 }
 
 #detailDrinks p {
-   background-image: linear-gradient(to right, #23bcf9, #2399f940);
+   background-image: linear-gradient(to right, #23bcf9, #2399f930);
    border: 1px solid #2392f9;
 }
 
@@ -199,11 +251,13 @@
 }
 
 .detail-reviews-block {
-   margin-bottom: 16px;
-   background-image: linear-gradient(to right, #1d1d1d15, #1d1d1d00);
-   border: 1px solid #F9D423;
+   margin-bottom: 20px;
+   /* background-image: linear-gradient(to right, #F9D42380, #e65c0000); */
+   /* border: 1px solid #F9D423; */
    border-radius: 12px;
-   padding: 12px 16px;
+   background-color: white;
+   box-shadow: 0 1px 24px 0 rgba(0, 0, 0, 0.2);
+   padding: 20px;
 }
 
 .detail-reviews-block.add-review {
@@ -248,7 +302,7 @@
    background-position: left;
    background-size: 200%;
    border: none;
-   border-radius: 60px;
+   border-radius: 12px;
    box-shadow: 0 6px 30px 0px rgba(239, 127, 0, 0.3);
    color: white;
    cursor: pointer;
@@ -266,25 +320,27 @@
 }
 
 #custReviews h4 {
+   display: inline;
    width: fit-content;
-   padding: 2px 8px;
-   margin-bottom: 8px;
+   padding: 4px 12px;
+   margin-right: 4px;
    background-color: #1d1d1d;
    border-radius: 6px;
    color: #F9D423;
    font-family: 'Nunito Sans', sans-serif;
-   font-size: 20px;
+   font-size: 18px;
    font-weight: 700;
 }
 
 #custReviews h5 {
-   margin-bottom: 8px;
+   display: inline;
    font-family: 'Montserrat', sans-serif;
    font-size: 14px;
    font-weight: 700;
 }
 
 #custReviews p {
+   margin-top: 12px;
    font-family: 'Nunito Sans', sans-serif;
    font-size: 18px;
 }
@@ -302,7 +358,16 @@
    }
 
    #restaurant {
-      padding: 12px 24px;
+      padding: 12px 0px;
+   }
+   
+   .detail-card,
+   .detail-card:nth-child(3) {
+      grid-template-columns: 1fr;
+   }
+
+   .restaurant-item__not__found img {
+      width: 100%;
    }
 }
 
@@ -314,6 +379,10 @@
    #restaurants,
    .detail-card {
       grid-template-columns: 1fr;
+   }
+
+   .detail-image {
+      height: 320px;
    }
 }
 

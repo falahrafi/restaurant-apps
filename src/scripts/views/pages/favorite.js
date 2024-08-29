@@ -9,13 +9,17 @@ const Favorite = {
     loadingDiv.style.visibility = 'visible';
 
     return `
-      <div class="content">
+      <section id="content" class="content restaurant-favorite
+      ">
         <h1 class="main-title" tabindex="0">Favorite Restaurants</h1>
         <div id="failedMessageContainer"></div>
         <div id="restaurants" class="restaurants">
  
         </div>
-      </div>
+      </section>
+      <footer>
+        <footer-copyright></footer-copyright>
+      </footer>
     `;
   },
 
@@ -33,7 +37,13 @@ const Favorite = {
       });
     } catch (Exception) {
       const failedMessageContainer = document.querySelector('#failedMessageContainer');
-      failedMessageContainer.innerHTML = '<div class="restaurant-item__not__found">Maaf, data restoran favorit anda tidak dapat ditampilkan :(</div>';
+      failedMessageContainer.innerHTML = `
+        <div class="restaurant-item__not__found">
+          <img src='./images/no-favorite-illustration.png' alt="No Favorite Illustration">
+          <!-- <img src='https://falahrafi.com/no-favorite-illustration.png' alt="No Favorite Illustration"> -->
+          <p>You haven't added any restaurant to your favorite.</p>
+        </div>
+      `;
     }
 
     // Hide Spinner

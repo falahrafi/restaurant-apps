@@ -1,6 +1,138 @@
-#hero img {
+#hero {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 36px;
+   margin-top: 160px;
+   margin-bottom: 160px;
+   /* padding: 12px 60px; */
+}
+
+.hero-background {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 30%;
+   height: 100vh;
+   background-image: linear-gradient(to top right, #e65c00, #e9c306);   
+}
+
+.hero-background div {
    width: 100%;
-   height: 400px;
+   height: 100%;
+  background-image: url('../public/images/spiral-pattern-darker.png');
+}
+
+.hero-image {
+   width: fit-content;
+   height: fit-content;
+   margin-left: auto;
+   margin-right: 80px;
+   padding: 20px;
+   border-radius: 24px;
+   background: linear-gradient(143.39deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 100%);
+   border-top: 3px solid rgba(255, 255, 255, 1);
+   border-left: 1px solid rgba(255, 255, 255, 1);
+   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+   -webkit-backdrop-filter: blur(40px);
+           backdrop-filter: blur(40px);
+}
+
+.hero-image img {
+   width: 360px;
+   height: 360px;
+   border: 6px solid #F9D423;
+   border-radius: 24px;
    object-fit: cover;
-   object-position: 100% 100%;
+   /* height: 400px;
+   object-position: 100% 100%; */
+}
+
+.hero-text {
+   padding-right: 32px;
+}
+
+.hero-title {
+   margin-top: 28px;
+   margin-bottom: 24px;
+   font-family: 'Maven Pro', sans-serif;
+   font-size: 56px;
+   font-weight: 700;
+}
+
+.hero-content {
+   margin-bottom: 28px;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 30px;
+}
+
+.button-main {
+   display: inline-block;
+   min-width: 132px;
+   min-height: 44px;
+   margin-top: 16px;
+   padding: 6px 24px;
+   background-image: linear-gradient(to right, #e65c00, #e9c306, #e9c306, #e65c00);
+   background-position: left;
+   background-size: 200%;
+   border-radius: 12px;
+   box-shadow: 0 6px 30px 0px rgba(239, 127, 0, 0.5);
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 22px;
+   font-weight: 700;
+   line-height: 44px;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+}
+
+.button-main:hover {
+   background-position: right;
+   color: white;
+}
+
+
+
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 1112px) {
+   .hero-image {
+    margin-right: 0;
+   }
+}
+
+@media screen and (max-width: 1075px) {
+   .hero-image {
+    margin-top: 60px;
+   }
+}
+
+@media screen and (max-width: 886px) {
+   #hero {
+      grid-template-columns: 1fr;
+   }
+
+   .hero-image {
+      margin-left: 0;
+   }
+
+   .hero-background {
+      width: 120px;
+      height: 180px;
+      border-radius: 0 0 0 100px;
+   }
+
+   .hero-background div {
+      border-radius: 0 0 0 100px;
+   }
+}
+
+@media screen and (max-width: 510px) {
+   .hero-image,
+   .hero-image img {
+    width: 100%;
+    height: 100%;
+   }
 }
